@@ -1,16 +1,13 @@
+global password
+# This function encodes passwords.
 def encode(p):
     temp = ""
     for i in p:
         temp += str((int(i) + 3) % 10)
     return temp
 
-def decode(p):
-    temp = ""
-    for i in p:
-        temp += str((int(i) + 7) % 10)
-    return temp
-
 if __name__ == "__main__":
+    # This is where the menu is stored and choices are handled.
     while True:
         print("Menu")
         print("------------")
