@@ -6,6 +6,17 @@ def encode(p):
         temp += str((int(i) + 3) % 10)
     return temp
 
+# David's Decode function
+def decode(encoded_passsword):
+    final_password = ""
+
+    #Iterate through each integer in the the encoded password and decode it and add to final password
+    for value in encoded_passsword:
+        new_value = int(value) + 7
+        final_password += str(new_value%10)
+    
+    return final_password
+    
 if __name__ == "__main__":
     # This is where the menu is stored and choices are handled.
     while True:
